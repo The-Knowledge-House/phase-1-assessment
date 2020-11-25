@@ -12,6 +12,13 @@ const carBrands = [
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
 
+  function onlySedans (arr) {
+    return arr.filter(function(el){
+      return el.type === "sedan";
+    })
+  }
+  console.log(onlySedans(carBrands));
+
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
