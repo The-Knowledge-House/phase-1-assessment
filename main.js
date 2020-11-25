@@ -58,7 +58,12 @@ let wishlist = [
   { title: "tesla", price: 2000 },
   { title: "tesla", price: 90000 },
 ];
-function shop(arr) {}
+
+function shop(arr) {
+
+result = wishlist.reduce((accumulator, current) => accumulator + current.price, 0);
+return result;
+}
 console.log(shop(wishlist));
 
 // 5.
