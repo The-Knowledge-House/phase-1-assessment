@@ -12,15 +12,37 @@ const carBrands = [
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
 
+carBrands.filter(function (carBrands) {
+  return carBrands.type === 'sedan';
+});
+
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
 
+function reverseString(str) {
+    var newStr = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newStr += str[i];
+    }
+    return newStr;
+}
+reverseString('cat');
+
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
+
+function longest_string(arr) {
+  let max = arr[0].length;
+  arr.map(i => max = Math.max(max, i.length));
+  result = arr.filter(i => i.length == max);
+  return result;
+}
+
+console.log(longest_string(['happy', 'sad', 'funny-ish', 'ugh']))
 
 // 4.
 // Using Reduce,
