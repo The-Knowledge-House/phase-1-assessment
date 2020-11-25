@@ -18,9 +18,23 @@ const carBrands = [
  * e.g., reverseString('cat') => 'tac'
  */
 
+function reverseString(str) {
+    let newString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
+
+function findLongest (arr) {
+  let longest = arr.sort(function (a, b) { return b.length - a.length })[0];
+  return longest;
+}
+
 
 // 4.
 // Using Reduce,
@@ -29,6 +43,7 @@ const carBrands = [
 // In other words, the total of all the prices in the array
 // of objects
 // The output should eqaute to 227005
+
 let wishlist = [
   { title: "tesla", price: 90000 },
   { title: "tesla", price: 45000 },
@@ -36,7 +51,9 @@ let wishlist = [
   { title: "tesla", price: 2000 },
   { title: "tesla", price: 90000 },
 ];
-function shop(arr) {}
+function shop(arr) {
+  return arr.reduce((acc,curVal)=> {return acc + curVal.price}, 0);
+}
 console.log(shop(wishlist));
 
 // 5.
