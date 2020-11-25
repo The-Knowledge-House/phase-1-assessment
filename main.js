@@ -84,8 +84,23 @@ console.log(shop(wishlist));
 /*
   Recursion is an algo where the function calls itself until a base case, usually a condition,
   turn to be true and a return value is executed. The return value from the base case is then
-  use where the previous recursive call was made. In addition to recursion, when a recursive
-  call is made, it will 
+  use for the previous recursive call that was made. In addition to recursion, when a recursive
+  call is made, the algo will enter a callstack meaning we are entering the function itself
+  with a different unique value as the parameter of the recursion function. When the value
+  of parameter meets true to the condition of the base case, the base case will return another
+  value, and exiting the current callstack to the previous callstack where previous recursive 
+  function was called. Because recursion adds callstack the space complexity of the recursion
+  is not good perhaps with a range O-notation from O(n) = O(n^2).
+
+ ex: 
+  function sum(n) {
+    if(n === 0){
+      return 0;
+    }
+    return sum(n - 1) + n
+  }
+
+  sum(3) //1 + 2 + 3 = 6
 
 
 */
@@ -95,6 +110,19 @@ console.log(shop(wishlist));
 // explain in detail how both sorting algorithms work
 // explain the benefits and the cons of each sorting algorithm
 // Should take more than one paragraph to do this part
+
+/* Elementary Sorting
+
+
+*/
+
+/* Intermediate Sorting
+
+
+*/
+
+
+
 
 /*  7.
  * flipBool takes an array of Boolean values
