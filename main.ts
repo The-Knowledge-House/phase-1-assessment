@@ -3,43 +3,46 @@
 // output =>
 //  { brand: 'Toyota', model: 'camry', type: 'sedan' },
 //   { brand: 'Hyundai', model: 'Sonata', type: 'sedan' }
-var carBrands = [
-    { brand: "Ford", model: "mustang", type: "convertible" },
-    { brand: "Toyota", model: "camry", type: "sedan" },
-    { brand: "Ram", model: "1500", type: "pickup" },
-    { brand: "Hyundai", model: "Sonata", type: "sedan" },
-    { brand: "Jeep", model: "wrangler", type: "suv" },
-    { brand: "Nissan", model: "frontier", type: "pickup" },
+const carBrands = [
+  { brand: "Ford", model: "mustang", type: "convertible" },
+  { brand: "Toyota", model: "camry", type: "sedan" },
+  { brand: "Ram", model: "1500", type: "pickup" },
+  { brand: "Hyundai", model: "Sonata", type: "sedan" },
+  { brand: "Jeep", model: "wrangler", type: "suv" },
+  { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
-var sendans = carBrands.filter(function (car) {
-    return car.type === "sedan";
+const sendans = carBrands.filter((car) => {
+  return car.type === "sedan";
 });
 console.log(sendans);
+
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
-var reverseString = function (someString) {
-    var stringArray = someString.split("");
-    var tempArray = [];
-    stringArray.forEach(function (character) {
-        tempArray.unshift(character);
-    });
-    return tempArray.join("");
+const reverseString = (someString: string): string => {
+  const stringArray = someString.split("");
+  const tempArray: string[] = [];
+  stringArray.forEach((character) => {
+    tempArray.unshift(character);
+  });
+  return tempArray.join("");
 };
+
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
-var longestStringInArray = function (arrayOfStrings) {
-    var stringToReturn = "";
-    arrayOfStrings.forEach(function (currentString) {
-        if (currentString.length > stringToReturn.length) {
-            stringToReturn = currentString;
-        }
-    });
-    return stringToReturn;
+const longestStringInArray = (arrayOfStrings: string[]): string => {
+  let stringToReturn = "";
+  arrayOfStrings.forEach((currentString: string) => {
+    if (currentString.length > stringToReturn.length) {
+      stringToReturn = currentString;
+    }
+  });
+  return stringToReturn;
 };
+
 // 4.
 // Using Reduce,
 // Given an array of all your wishlist items, figure out
@@ -47,18 +50,23 @@ var longestStringInArray = function (arrayOfStrings) {
 // In other words, the total of all the prices in the array
 // of objects
 // The output should eqaute to 227005
-var wishlist = [
-    { title: "tesla", price: 90000 },
-    { title: "tesla", price: 45000 },
-    { title: "tesla", price: 5 },
-    { title: "tesla", price: 2000 },
-    { title: "tesla", price: 90000 },
+let wishlist = [
+  { title: "tesla", price: 90000 },
+  { title: "tesla", price: 45000 },
+  { title: "tesla", price: 5 },
+  { title: "tesla", price: 2000 },
+  { title: "tesla", price: 90000 },
 ];
-function shop(arr) {
-    return arr.reduce(function (acc, cur) {
-        return acc + cur.price;
-    }, 0);
+interface wishlistItem {
+  title: string;
+  price: number;
 }
+function shop(arr: wishlistItem[]): number {
+  return arr.reduce((acc, cur) => {
+    return acc + cur.price;
+  }, 0);
+}
+
 // 5.
 //Explain recursion in your own words,
 // give an example of a recursive algorithm, and explain how it works
@@ -76,10 +84,12 @@ function shop(arr) {
  * n * (n-1) * (n-2) * ... * (n - (n-2)) * 1
  * There is more that's going on here with this idea of the function call stack but I won't get into that
  */
+
 //6. List two sorting algorithms,
 // explain in detail how both sorting algorithms work
 // explain the benefits and the cons of each sorting algorithm
 // Should take more than one paragraph to do this part
+
 //bubble sort
 /**
  * gven an array go through array swapping numbers that are out of order
@@ -101,6 +111,7 @@ function shop(arr) {
  * cons: very interesting to implement
  *
  */
+
 /*  7.
  * flipBool takes an array of Boolean values
  * it should call map on the array and flip
@@ -111,11 +122,12 @@ function shop(arr) {
  * then return the new array
  * Be sure to use map()!
  */
-var flipBool = function (arr) {
-    return arr.map(function (currentBool) {
-        return !currentBool;
-    });
+const flipBool = (arr: boolean[]) => {
+  return arr.map((currentBool: boolean) => {
+    return !currentBool;
+  });
 };
+
 //Bonus:
 //FEAST OR FAMINE
 //  - Write a method that takes two arguments: an animal and a food, which are lowercase and have at least two letters each
