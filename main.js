@@ -12,15 +12,47 @@ const carBrands = [
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
 
+function carTypeSedan(arr) { 
+  return arr.filter(element => { 
+    return element.type === "sedan"
+  })
+}
+
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
 
+function reverseString(str) { 
+  let array = [];
+
+  for (let i = str.length; i >= 0 ; i--) { 
+    array.push(str[i]);
+  }
+
+  return array.join('');
+}
+
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
+//['hello', 'catepillars']
+
+function longestStr(arr) { 
+  let length = 0;
+  let str;
+
+  for (let i = 0; i < arr.length; i++) { 
+    if (length < arr[i].length) {
+      length = arr[i].length
+      str = arr[i]
+    }
+  }
+  return str;
+}
+
+
 
 // 4.
 // Using Reduce,
@@ -36,7 +68,11 @@ let wishlist = [
   { title: "tesla", price: 2000 },
   { title: "tesla", price: 90000 },
 ];
-function shop(arr) {}
+function shop(arr) {
+  return wishlist.reduce((accumulator, current) => { 
+    return accumulator + current.price;
+  }, 0)
+}
 console.log(shop(wishlist));
 
 // 5.
@@ -44,6 +80,16 @@ console.log(shop(wishlist));
 // give an example of a recursive algorithm, and explain how it works
 //Make sure to detail the steps that make up a recursive algorithm
 // A detailed explanation.
+ 
+/*
+  Recursion is an algo where the function calls itself until a base case, usually a condition,
+  turn to be true and a return value is executed. The return value from the base case is then
+  use where the previous recursive call was made. In addition to recursion, when a recursive
+  call is made, it will 
+
+
+*/
+
 
 //6. List two sorting algorithms,
 // explain in detail how both sorting algorithms work
