@@ -112,13 +112,37 @@ console.log(shop(wishlist));
 // Should take more than one paragraph to do this part
 
 /* Elementary Sorting
-
+ Bubble sort: 
+  -it has the time complexity of O(n^2) and space complexity O(1). The reason the time 
+  complexity of the bubble sort is not good is because we have nest for loops on the algo,
+  and the bigger the array the slow the sorting occurs. Also, although bubble sort is 
+  inefficient with time, it still serves as the foundation to learn about other types
+  sortings.
+  -Bubble sort grabs an unsorted array and takes the first element to compare to the
+  neighboring element. If the current element is greater than the neighboring element,
+  then a swap will happen. This will continue until the biggest value is sent to the end of
+  the array or bubble to the end of the array. This how the first iteration is completed. The 
+  next iteration will do the same, current value compare with neighboring value, if current
+  value is bigger than the neighboring value then a swap will occur. The swap means
+  that the current value will go second and the neigboring value will go first. The iteration
+  will stop when the second largest value is bubbled up to the second to the last of the array.
+  With in each iteration the sorting of elements become smaller and smaller until the 
+  array becomes completely sorted.
 
 */
 
 /* Intermediate Sorting
+Merge sort:
+-it has a faster time complexity than Bubble sort at O(nlogn), however, the space
+complexity is O(n) and this is due to the recursive calls in the algos. Merge sort might do 
+great on an array that is unsorted but will still do the same function on an array that
+its sorted and it can harm the time complexity in that case.
 
-
+-Merge sort takes an unsorted, finds the midpoint of the array and split it up in half. 
+These halves are then done the same, find mid point of array, and split in half. The splitting
+of arrays will stop when you get single arrays. These single arrays are then compare, sorted,
+and merged into pairs. Then these pairs are compare, sorted, and merging again into another 
+bundle of sorted array. The merging will stop when you get a complete array of sorted element.
 */
 
 
@@ -134,7 +158,14 @@ console.log(shop(wishlist));
  * then return the new array
  * Be sure to use map()!
  */
-const flipBool = (arr) => {};
+const flipBool = (arr) => { 
+  return arr.map((element) => { 
+    
+  })
+};
+
+
+
 
 //Bonus:
 //FEAST OR FAMINE
