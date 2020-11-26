@@ -168,3 +168,19 @@ console.log(flipBool([false, true]))
 // > i.e.:
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
+
+function FEASTORFAMINE(animal, food) {
+  animal = animal.toLowerCase();
+  food = food.toLowerCase();
+
+  if (animal.length >= 2 && food.length >= 2) {
+
+    let anm = animal[0] + animal[animal.length - 1];
+    let fod = food[0] + food[food.length - 1];
+
+    if (anm === fod) return anm;
+    return false;
+  }
+}
+
+console.log(FEASTORFAMINE('great blue heron', 'garlic naan'));
