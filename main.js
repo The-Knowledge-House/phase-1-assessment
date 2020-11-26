@@ -14,7 +14,7 @@ const carBrands = [
 const sedans = carBrands.filter((c) => {
   return c.type == "sedan";
 });
-console.log(carBrands);
+console.log(sedans);
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
