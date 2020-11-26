@@ -160,7 +160,11 @@ bundle of sorted array. The merging will stop when you get a complete array of s
  */
 const flipBool = (arr) => { 
   return arr.map((element) => { 
-    
+    if (element === true) {
+      return arr[element] = false;
+    } else { 
+      return arr[element] = true; 
+    }
   })
 };
 
@@ -169,9 +173,20 @@ const flipBool = (arr) => {
 
 //Bonus:
 //FEAST OR FAMINE
-//  - Write a method that takes two arguments: an animal and a food, which are lowercase and have at least two letters each
-//  - If the first and last letter of the animal match the first and last letter of the food, return the first and last letters
+//  - Write a method that takes two arguments: an animal and a food, which are 
+//lowercase and have at least two letters each
+//  - If the first and last letter of the animal match the first and last letter of 
+//the food, return the first and last letters
 //  - otherwise, if the letters do not match, return false
 // > i.e.:
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
+
+
+function feastOrFamine(animal, food) { 
+  if (animal[0] + animal[animal.length - 1] === food[0] + food[food.length - 1]) {
+    return animal[0] + food[food.length - 1]
+  } else { 
+    return false;
+  }
+}
