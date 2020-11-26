@@ -87,7 +87,11 @@ console.log(shop(wishlist));
  * then return the new array
  * Be sure to use map()!
  */
-const flipBool = (arr) => {};
+const flipBool = (arr) => {
+   return arr.map(function(flipBool) {return !flipBool})
+};
+console.log(flipBool([false, true, false]));
+
 
 //Bonus:
 //FEAST OR FAMINE
