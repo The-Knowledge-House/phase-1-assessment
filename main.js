@@ -12,19 +12,39 @@ const carBrands = [
   { brand: "Nissan", model: "frontier", type: "pickup" },
 ];
 
+let sedanTypes = carBrands.filter(function(type) {
+  return type.type == "sedan";
+});
+
+console.log(sedanTypes);
+
 /* 2.
  * reverseString takes a string
  * and should return the reverse of the string, you cannot use .reverse method
  * e.g., reverseString('cat') => 'tac'
  */
 
+function reverseString(string) {
+  if (string === "")
+    return "";
+  else
+    return reverseString(string.substr(1)) + string.charAt(0); //recursive call to return portion of the string + 1st char
+}
+
+console.log(reverseString("knowledge"));
 
 
 // 3.
 // Write a function that takes an array of strings,
 // and returns the longest string in the array
 
+const cloudDatabases = ["MongoDB", "BetterCloud", "IBM", "Amazon Web Services", "KeyMe", "LiveTiles", "SimpleReach", "SocialFlow", "ZetaGlobal"];
 
+let longestData = cloudDatabases.reduce(function (accumulator, value) {
+  return accumulator.length > value.length ? accumulator : value
+}, '');
+
+console.log(longestData);
 
 // 4.
 // Using Reduce,
@@ -40,7 +60,13 @@ let wishlist = [
   { title: "tesla", price: 2000 },
   { title: "tesla", price: 90000 },
 ];
-function shop(arr) {}
+function shop(arr) {
+  const result = arr.reduce(function (acc, value) {
+    return acc + value.price;
+  }, 0);
+  return result;
+}
+
 console.log(shop(wishlist));
 
 // 5.
@@ -101,9 +127,15 @@ recurse();
  * then return the new array
  * Be sure to use map()!
  */
-const flipBool = (arr) => {};
+let booleans = [false, false, true, false, true, true, true]; //create an array of booleans
 
+const flipBool = (arr) => {                 // function to reverse the bools
+  let flipped = arr.map(function (bool) {  // using map to create a new array
+    return !bool                           //using !not operand to reverse the output
+  })
+};
 
+console.log(flipBool(booleans));          //calling the function
 
 //Bonus:
 //FEAST OR FAMINE
@@ -113,3 +145,5 @@ const flipBool = (arr) => {};
 // > i.e.:
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
+
+//Didn't have enough time to try this one. 
