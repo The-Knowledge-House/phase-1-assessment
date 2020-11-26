@@ -109,4 +109,16 @@ flipBool = arr.map(function (word) {
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
 
-function animalFood(animal, food) {}
+function animalFood(animal, food) {
+  let firstA = animal[0];
+  let lastA = animal[animal.length - 1];
+
+  let firstF = food[0];
+  let lastF = food[food.length - 1];
+
+  if (firstA === firstF && lastA === lastF) {
+    return firstA + lastA;
+  } else {
+    return false;
+  }
+}
