@@ -160,5 +160,8 @@ console.log(flipBool([true, false, true, true, false]))
 // > input => `"great blue heron", "garlic naan"`
 // > output => `"gn"`
 function bonus(animal, food) {
+  if (animal.length >= 2 && food.length >= 2) {
 
+  }
 }
+
