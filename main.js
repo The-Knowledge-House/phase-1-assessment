@@ -71,11 +71,39 @@ console.log(shop(wishlist));
 // give an example of a recursive algorithm, and explain how it works
 //Make sure to detail the steps that make up a recursive algorithm
 // A detailed explanation.
+/* Recursion is a programming pattern used to simplify larger task.
+For example with this function:
+function pow(x, n) {
+  return (n == 1) ? x : (x * pow(x, n - 1));
+}
+
+We used JavaScript operators to simplify the function. Although, the function is now harder to understand.*/
+
+
+
+
 
 //6. List two sorting algorithms,
 // explain in detail how both sorting algorithms work
 // explain the benefits and the cons of each sorting algorithm
 // Should take more than one paragraph to do this part
+
+/* 
+Bubble Sort:
+Bubble Sort starts by locating the highest value in the array and relocating it to the last index. 
+Then goes back to the beginning of the array and compares the first two elements and swaps the based on which element is higher, 
+moving higher to the back. This continues until all elements in array are sorted. 
+Pros: simple code only taking a few lines and little memory used once sorted
+Cons: inefficient with the amount of time it takes to sort 
+
+Merge Sort:
+Merge Sort is known as the “divide-and-conquer algorithm” because it starts by dividing the array into sub arrays and sorts 
+through the separated arrays then merging the sub arrays into the single sorted array. 
+Pros: faster sorting also for larger list 
+Cons: uses more memory space with storing sub arrays
+*/
+
+
 
 /*  7.
  * flipBool takes an array of Boolean values
