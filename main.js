@@ -74,6 +74,44 @@ console.log(shop(wishlist));
 // explain the benefits and the cons of each sorting algorithm
 // Should take more than one paragraph to do this part
 
+/*
+
+The two sorting algorithms that I will explain are:
+
+Bubble Sort & Merge Sort
+
+Bubble Sort is the process of comparing the current and adjacent elements in
+an array and swapping them with each other if they are in the wrong order 
+(i.e. if the adjacent element is lower/less-than than the current). 
+The term ‘bubble’ comes from this process of ‘bubbling’ the values to the left 
+of the array as it passes through and continuing to repeat this process 
+(passing through and sorting pairs of elements in the array) until it 
+successfully goes one whole pass without any swap, in which the algorithm will then know it is sorted.
+The benefits of bubble sort are that it is simple and a good way to be introduced to sorting algorithms.
+The cons of bubble sort are that it can have very bad runtime and is considered one of the slowest algo's 
+especially when given much larger arrays which loses a company money and resources.
+
+An example of bubble sort on an array can be seen below:
+
+First Pass:
+( 5 1 4 2 8 ) –> ( 1 5 4 2 8 ), Here, the algorithm compares the first two elements ([5,1]), and swaps them since 5 > 1.
+
+Now the array is ( 1 5 4 2 8 ).
+
+( 1 5 4 2 8 ) –>  ( 1 4 5 2 8 ), Swap since 5 > 4
+( 1 4 5 2 8 ) –>  ( 1 4 2 5 8 ), Swap since 5 > 2
+( 1 4 2 5 8 ) –> ( 1 4 2 5 8 ), Now, since these elements are already in order (8 > 5), the algorithm does not swap them.
+
+Bubble sort will continue to make passes through the array as seen above and swap elements until it is completely sorted.
+
+------ Merge Sort ---------
+Merge Sort is the process of splitting an array into two separate arrays it works by ...
+The benefits of merge sort are that it is fast/reliable and works best for most of the time.
+The cons of merge sort are that it is not stable.
+
+*/
+
+
 /*  7.
  * flipBool takes an array of Boolean values
  * it should call map on the array and flip
